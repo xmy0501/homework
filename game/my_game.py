@@ -16,14 +16,16 @@ def fight(my_hp, my_power, enemy_hp, enemy_power):
 
         # 判断血量多少定输赢
         if my_hp >= enemy_hp:
-            print("我赢了")
-            print(f"我最终的血量是{my_hp}, 敌人的最终血量是{enemy_hp}")
-            break
+            if my_hp <= 0:
+                print("我赢了")
+                print(f"我最终的血量是{my_hp}, 敌人的最终血量是{enemy_hp}")
+                break
         elif my_hp <= enemy_hp:
-            print("我输了")
-            print(f"我最终的血量是{my_hp}, 敌人的最终血量是{enemy_hp}")
-            break
-        elif my_hp == enemy_hp:
+            if enemy_hp <= 0:
+                print("我输了")
+                print(f"我最终的血量是{my_hp}, 敌人的最终血量是{enemy_hp}")
+                break
+        elif my_hp == enemy_hp == 0:
             print("平局")
             print(f"我最终的血量是{my_hp}, 敌人的最终血量是{enemy_hp}")
             break
