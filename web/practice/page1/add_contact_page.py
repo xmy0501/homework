@@ -6,11 +6,17 @@ from web.practice.page1.base_page1 import Base_Page1
 
 class AddContactPage(Base_Page1):
 
-    def add_contact(self, name, account, phonenum):
+    def add_contact(self, name, account, gender, phonenum):
         # 输入姓名
         self.find(By.ID, "username").send_keys(name)
         # 输入账号
         self.find(By.ID, "memberAdd_acctid").send_keys(account)
+        # 输入性别
+        if gender == "男":
+            pass
+        elif gender == "女":
+            self.find(By.XPATH, '//*[@value="2"]').click()
+
         # 输入手机号
         self.find(By.ID, "memberAdd_phone").send_keys(phonenum)
         # 保存

@@ -12,8 +12,9 @@ class TestCase:
         name = "xmy_03"
         account = "xmy_03_hogwarts"
         phonenum = "15221345679"
+        gender = "女"
         value = "zz"
         # 点击添加成员自定义为addmember
-        self.main.add_member_click().add_contact(name, account, phonenum).get_member(value)
+        self.main.add_member_click().add_contact(name, account, gender, phonenum).get_member(value)
         # addmember.add_contact(name, account, phonenum)
         # addmember.get_member()
