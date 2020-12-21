@@ -19,5 +19,6 @@ def request(flow: http.HTTPFlow):
             )
 
 
+
 if __name__ == '__main__':
     os.system(r'mitmdump -p 8999 -s /Users/a10369/PycharmProjects/homework/test_mitmproxy/test_maplocal_xueqiu.py')
